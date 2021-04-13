@@ -1,9 +1,8 @@
 import React from "react";
-import me from "../imgs/me.png";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import {GrContact} from 'react-icons/gr'
 
-export const Sidebar = () => {
+export const Main = () => {
   return (
     <div className="grid grid-cols-3 grid-rows-3 top-0 h-screen bg-gradient-to-r from-red-500">
       <div className="col-span-1 row-span-1 h-screen  text-white grid grid-rows-6">
