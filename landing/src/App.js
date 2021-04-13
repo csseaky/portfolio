@@ -1,9 +1,9 @@
-import {Person} from './components/Person'
+import {Sidebar} from './components/Sidebar'
 
 function App() {
   return (
     <>
-    <Person/>
+    <Sidebar/>
     </>
   );
 }

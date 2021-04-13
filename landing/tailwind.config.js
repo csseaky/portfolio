@@ -6,6 +6,11 @@ module.exports = {
       fontFamily: {
         body: ["Roboto"],
       },
+      colors: {
+        blue: {
+          linkedin: "#0B66C2",
+        },
+      },
     },
   },
   variants: {
