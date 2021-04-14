@@ -13,11 +13,11 @@ export const Main = () => {
   const { isConversationHidden, setIsConversationHidden } = useGlobalContext();
   return (
     <div className="grid grid-cols-2 font-body auto-cols-max">
-      <div className="col-span-1 mt-24 ml-40 max-w-lg flex flex-col gap-10 opacity-70 rounded-md  shadow-2xl text-white">
+      <div className="col-span-1 mt-60 ml-60 max-w-lg flex flex-col gap-10 opacity-70 rounded-md  shadow-2xl text-white">
         <img
           src={aky}
           alt="a picture of me."
-          className="w-52 h-52 self-center mt-5 rounded-lg opacity-100 ml-5"
+          className="w-72 h-72 self-center mt-5 rounded-lg opacity-100 ml-5"
         />
         <p
           className="text-5xl pl-6 font-medium opacity-100 self-center"
@@ -28,7 +28,7 @@ export const Main = () => {
         </p>
         <Conversation />
       </div>
-      <div className="grid col-span-1 grid-rows-4 h-5/6 ml-48 mt-48 text-white ">
+      <div className="grid col-span-1 grid-rows-4 h-5/6 ml-16 mt-48 text-white ">
         <div className="row-span-1">
           <h1 className="text-8xl opacity-50">Hi, I'm</h1>
           <h1 className="text-4xl">Alper Kaan YILDIZ</h1>
