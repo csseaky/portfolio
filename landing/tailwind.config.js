@@ -11,6 +11,7 @@ module.exports = {
         blue: {
           linkedin: "#0B66C2",
           postgres: "#2F5E8D",
+          card: "#8B160E"
         },
         red: {
           gmail: "#EA4335",

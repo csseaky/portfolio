@@ -6,37 +6,31 @@ import { ImHtmlFive } from "react-icons/im";
 import { IoLogoCss3 } from "react-icons/io";
 import { BiRightArrow } from "react-icons/bi";
 import aky from "../imgs/aky.jpg";
+import Conversation from "../components/Conversation";
+import { useGlobalContext } from "./context/useGlobalContext";
 
 export const Main = () => {
-  const [modalIsClicked, setModalIsClicked] = React.useState(false);
-  if (modalIsClicked){
-    return (
-      <div>
-        modal test
-      </div>
-    )
-  }
+  const { isConversationHidden, setIsConversationHidden } = useGlobalContext();
   return (
     <div className="grid grid-cols-2 font-body auto-cols-max">
-      <div className="col-span-1 mt-24 ml-40 max-w-lg flex flex-col gap-10 bg-yellow-400 opacity-70 rounded-md border-solid border-2 border-gray-700 shadow-2xl">
+      <div className="col-span-1 mt-24 ml-40 max-w-lg flex flex-col gap-10 opacity-70 rounded-md  shadow-2xl text-white">
         <img
           src={aky}
           alt="a picture of me."
-          className="w-64 h-64 self-center mt-5 rounded-lg opacity-100"
+          className="w-52 h-52 self-center mt-5 rounded-lg opacity-100 ml-5"
         />
-        <p className="text-3xl pl-6 font-medium">Welcome! </p>
-        <p className="text-3xl pl-6 font-light">
-          You can visit my GitHub, LinkedIn pages or contact me via mail.{" "}
+        <p
+          className="text-5xl pl-6 font-medium opacity-100 self-center"
+          onMouseOver={() => setIsConversationHidden(!isConversationHidden)}
+          onMouseOut={() => setIsConversationHidden(!isConversationHidden)}
+        >
+          Welcome!{" "}
         </p>
-        <p className="text-3xl pl-6 font-light">
-          Click the{" "}
-          <span className="animate-pulse text-red-800">energetic</span> button
-          to know more about me and my work.{" "}
-        </p>
+        <Conversation />
       </div>
-      <div className="grid col-span-1 grid-rows-4 h-5/6 ml-48 mt-48 ">
+      <div className="grid col-span-1 grid-rows-4 h-5/6 ml-48 mt-48 text-white ">
         <div className="row-span-1">
-          <h1 className="text-8xl">Hi, I'm</h1>
+          <h1 className="text-8xl opacity-50">Hi, I'm</h1>
           <h1 className="text-4xl">Alper Kaan YILDIZ</h1>
         </div>
         <div className="row-span-1 mt-6">
@@ -52,7 +46,7 @@ export const Main = () => {
         <div className="row-span-1 flex flex-row gap-12">
           <div>
             <a href="https://github.com/csseaky">
-              <FaGithub className="w-12 h-12 fill-current text-gray-900" />
+              <FaGithub className="w-12 h-12 fill-current text-white" />
             </a>
           </div>
           <div>
@@ -62,10 +56,7 @@ export const Main = () => {
           </div>
           <div>
             <button>
-              <GrMail
-                className="w-12 h-12 fill-current text-red-700"
-                onClick={() => setModalIsClicked(true)}
-              />
+              <GrMail className="w-12 h-12 fill-current text-red-700" />
             </button>
           </div>
         </div>

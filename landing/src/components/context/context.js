@@ -1,9 +1,10 @@
-import React from "react";
+import React, {useState} from "react";
 
 export const AppContext = React.createContext();
 
 export const AppProvider = ({ children }) => {
+  const [isConversationHidden, setIsConversationHidden] = useState(false);
   return (
-    <AppContext.Provider value={{ a: "b" }}>{children}</AppContext.Provider>
+    <AppContext.Provider value={{ isConversationHidden, setIsConversationHidden }}>{children}</AppContext.Provider>
   );
 };
